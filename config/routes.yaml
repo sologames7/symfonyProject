@@ -1,3 +1,7 @@
 controllers:
     resource: ../src/Controller/
     type: attribute
+
+trainer:
+    path: /trainer/license
+    controller: App\Controller\TrainerController::number
