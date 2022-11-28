@@ -23,3 +23,28 @@ header{
 body{
     margin: 0;
 }
+
+.pokeCard {
+    width: 400px;
+    border: solid black 2px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .pokemonImage{
+    width: 100%;
+    height: 200px;
+  }
+
+  .pokeInfos{
+    display: flex;
+    flex-direction: column;
+  }
+  .pokeInfo{
+    display: flex;
+    flex-direction: row;
+  }
+  .pokeinfo{
+    display: flex;
+    flex-direction: row;
+  }

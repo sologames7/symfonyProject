@@ -10,8 +10,8 @@ class TrainerController extends AbstractController
 {
     public function number(): Response
     {
-        $number = random_int(0, 100);
-
+        $number = random_int(100, 1000);
+        
         return $this->render('number.html.twig', [
             'number' => $number,
         ]);

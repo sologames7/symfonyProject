@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello!{% endblock %}
+
+{% block body %}
+    <div class="pokeCard">
+        <img class="pokemonImage" src="" alt="image du pokemon">
+        <div class="pokeInfos">
+            <div class="pokeInfo">
+                <p><b>Name: </b></p>
+                <p>{{ name }}</p>
+            </div>
+            <div class="pokeInfo">
+                <p><b>Order: </b></p>
+                <p>{{ pokemonOrder }}</p>
+            </div>
+            <div class="pokeInfo">
+                <p><b>Stats: </b></p>
+                <div class="statsList">
+                    {% for  stat in stats %}
+                        <div class"pokeInfo">
+                        <p><b>{{ stat.stat.name }}: </b></p>
+                        <p>{{ stat.base_stat }}</p>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
