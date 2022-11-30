@@ -3,12 +3,20 @@
 {% block title %}Hello!{% endblock %}
 
 {% block body %}
+    <form id="searchBar">
+        <input type="text" name="pokemonName" placeholder="type a pokemon name">
+        <input id="loupe"type="image" src="{{ asset('img/loupe.png') }}" alt="Submit Form" />
+    </form>
     <div class="pokeCard">
-        <img class="pokemonImage" src="" alt="image du pokemon">
+        <img class="pokemonImage" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{{ id }}.png" alt="image de {{ species.name }}">
         <div class="pokeInfos">
             <div class="pokeInfo">
                 <p><b>Name: </b></p>
                 <p>{{ name }}</p>
+            </div>
+            <div class="pokeInfo">
+                <p><b>Species: </b></p>
+                <p>{{ species.name  }}</p>
             </div>
             <div class="pokeInfo">
                 <p><b>Order: </b></p>
@@ -17,13 +25,25 @@
             <div class="pokeInfo">
                 <p><b>Stats: </b></p>
                 <div class="statsList">
+                    <ul>
                     {% for  stat in stats %}
-                        <div class"pokeInfo">
+                        <li class="pokeStat">
                         <p><b>{{ stat.stat.name }}: </b></p>
                         <p>{{ stat.base_stat }}</p>
-                        </div>
+                        </li>
                     {% endfor %}
+                    </ul>
                 </div>
+            </div>
+            <div class="pokeInfo type">
+                <p><b>Types:  </b></p>
+                {% for  type in types %}
+                        <p>{{ type.type.name }}, </p>
+                {% endfor %}
+            </div>
+            <div class="pokeInfo">
+                <p><b>Base experience: </b></p>
+                <p>{{ base_experience }}</p>
             </div>
         </div>
     </div>

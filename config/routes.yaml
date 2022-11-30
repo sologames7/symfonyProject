@@ -5,7 +5,3 @@ controllers:
 trainer:
   path: /trainer/license
   controller: App\Controller\TrainerController::number
-
-singlePokemon:
-  path: /singlePokemon
-  controller: App\Controller\SinglePokemon

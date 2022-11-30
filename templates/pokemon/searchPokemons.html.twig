@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello!{% endblock %}
+
+{% block body %}
+    <form id="searchBar">
+        <input type="text" name="search" placeholder="shearch by name">
+        <input id="loupe"type="image" src="{{ asset('img/loupe.png') }}" alt="Submit Form" />
+    </form>
+
+    <div class="pokemonsContainer">
+        {% for  pokemon in pokemonList %}
+        <a href='/singlePokemon?pokemonName={{pokemon.name}}&x=0&y=0' class="pokemonCard">
+            <img src="{{pokemon.url}}" alt="image de {{pokemon.name}}">
+            <p>{{pokemon.name}}</p>
+        </a>
+        {% endfor %}
+        
+    </div>
+{% endblock %}

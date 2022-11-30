@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello!{% endblock %}
+
+{% block body %}
+    <form id="searchBar">
+        <input type="text" name="pokemonName" placeholder="type a pokemon name">
+        <input id="loupe"type="image" src="{{ asset('img/loupe.png') }}" alt="Submit Form" />
+    </form>
+    <p><b>Oops, this pokemon doesn't exist...   </b></p>
+{% endblock %}
